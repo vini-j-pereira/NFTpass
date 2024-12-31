@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo, <span id="user-name">Usuário</span>!</h1>
+  </header>
+
+  <main>
+    <!-- Seção: Saldo -->
+    <section id="saldo">
+      <h2>Saldo</h2>
+      <p><strong>Saldo Atual:</strong> <span id="user-saldo">0 ETH</span></p>
+      <button id="refresh-saldo">Atualizar Saldo</button>
+    </section>
+
+    <!-- Seção: Ingressos/Convites NFTs -->
+    <section id="nfts">
+      <h2>Seus Ingressos/Convites NFTs</h2>
+      <div id="nfts-list">
+        <!-- Os NFTs serão exibidos dinamicamente aqui -->
+      </div>
+    </section>
+
+    <!-- Seção: Depósitos e Saques -->
+    <section id="transacoes">
+      <h2>Gestão de Depósitos e Saques</h2>
+      <form id="deposito-form">
+        <h3>Depósito</h3>
+        <input type="number" id="deposito-valor" placeholder="Valor (em BRL)">
+        <button type="submit">Depositar</button>
+      </form>
+      <form id="saque-form">
+        <h3>Saque</h3>
+        <input type="number" id="saque-valor" placeholder="Valor (em BRL)">
+        <button type="submit">Sacar</button>
+      </form>
+    </section>
+
+    <!-- Seção: Compras e Vendas -->
+    <section id="compras-vendas">
+      <h2>Compras e Vendas</h2>
+      <form id="comprar-nft-form">
+        <h3>Comprar NFT</h3>
+        <input type="text" id="comprar-nft-id" placeholder="ID do NFT">
+        <button type="submit">Comprar</button>
+      </form>
+      <form id="vender-nft-form">
+        <h3>Vender NFT</h3>
+        <input type="text" id="vender-nft-id" placeholder="ID do NFT">
+        <button type="submit">Vender</button>
+      </form>
+    </section>
+
+    <!-- Seção: Criação de NFTs -->
+    <section id="criar-nft">
+      <h2>Criação de NFTs</h2>
+      <form id="criar-nft-form">
+        <input type="text" id="nft-nome" placeholder="Nome do NFT">
+        <textarea id="nft-descricao" placeholder="Descrição do NFT"></textarea>
+        <input type="file" id="nft-arquivo" accept="image/*">
+        <button type="submit">Criar NFT</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/profile.js"></script>
+</body>
+</html>
